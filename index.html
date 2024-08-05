@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Dogs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cardápio</h1>
+        
+        <!-- Apresentação do Cardápio -->
+        <div class="category">
+            <h2>Hot Dogs</h2>
+            <div class="item">
+                <span>
+                    <strong>Dog Tradicional</strong>
+                    <p>Pão 20cm, 1 Salsicha, Milho, Ervilha, Alface, Tomate, Batata palha, Molhos</p>
+                    <p>R$ 9,00</p>
+                </span>
+                <input type="number" min="0" value="0" data-name="Dog Tradicional" data-price="9.00">
+            </div>
+            <div class="item">
+                <span>
+                    <strong>Dog Duplo</strong>
+                    <p>Pão 20cm, 2 Salsicha, Purê, Milho, Ervilha, Alface, Tomate, Batata palha, Molhos</p>
+                    <p>R$ 12,00</p>
+                </span>
+                <input type="number" min="0" value="0" data-name="Dog Duplo" data-price="12.00">
+            </div>
+            <div class="item">
+                <span>
+                    <strong>Dog Calabreso</strong>
+                    <p>Pão 20cm, 1 Salsicha, Calabresa, Purê, Milho, Ervilha, Alface, Tomate, Batata palha, Molhos</p>
+                    <p>R$ 14,00</p>
+                </span>
+                <input type="number" min="0" value="0" data-name="Dog Calabreso" data-price="14.00">
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Doces</h2>
+            <div class="item">
+                <span>
+                    <strong>Brigadeiro</strong>
+                    <p>R$ 3,00</p>
+                </span>
+                <input type="number" min="0" value="0" data-name="Brigadeiro" data-price="3.00">
+            </div>
+            <div class="item">
+                <span>
+                    <strong>Fatia de bolo</strong>
+                    <p>R$ 5,00</p>
+                </span>
+                <input type="number" min="0" value="0" data-name="Fatia de bolo" data-price="5.00">
+            </div>
+        </div>
+
+        <div class="category">
+            <h2>Bebidas</h2>
+            <div class="item">
+                <span>
+                    <strong>Refrigerante</strong>
+                    <p>Lata 350ml</p>
+                    <p>R$ 3,50</p>
+                </span>
+                <input type="number" min="0" value="0" data-name="Refrigerante" data-price="3.50">
+            </div>
+            <div class="item">
+                <span>
+                    <strong>Suco Natural</strong>
+                    <p>Copo 300ml</p>
+                    <p>R$ 4,00</p>
+                </span>
+                <input type="number" min="0" value="0" data-name="Suco Natural" data-price="4.00">
+            </div>
+        </div>
+        
+        <!-- Gerenciamento do Pedido -->
+        <div class="cart">
+            <h2>Carrinho de Compras</h2>
+            <div id="cartItems"></div>
+            <div class="total">Total: R$ <span id="totalPrice">0.00</span></div>
+        </div>
+
+        <!-- Finalização do Pedido -->
+        <div class="checkout">
+            <h2>Finalizar Pedido</h2>
+            <select id="paymentMethod">
+                <option value="credit">Cartão de Crédito</option>
+                <option value="debit">Cartão de Débito</option>
+                <option value="pix">Pix</option>
+            </select>
+            <input type="text" id="fullName" placeholder="Nome Completo">
+            <input type="text" id="address" placeholder="Endereço para Entrega">
+            <button onclick="finalizeOrder()">Confirmar Pedido</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
